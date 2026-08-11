@@ -11,18 +11,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sea-deep:#16303F;
-    --sea-mid:#2C5B6E;
-    --sea-light:#7FA6B2;
-    --sand:#EDE3CE;
-    --sand-light:#F6F0E1;
-    --clay:#BD4A2E;
-    --clay-dark:#9A3A22;
-    --moss:#5C6E4A;
-    --moss-dark:#374330;
-    --ink:#201D18;
-    --ink-soft:#4B463C;
-    --paper-line: rgba(32,29,24,0.12);
+    --sea-deep:#3E2A16;
+    --sea-mid:#8A5A2B;
+    --sea-light:#C9A66B;
+    --sand:#E7CE9C;
+    --sand-light:#F6EAD0;
+    --clay:#B8441E;
+    --clay-dark:#8F3115;
+    --gold:#D9A441;
+    --gold-dark:#B37F24;
+    --moss:#5C7A3D;
+    --moss-dark:#2E4A1F;
+    --ink:#2B1D0F;
+    --ink-soft:#5A4A34;
+    --paper-line: rgba(43,29,15,0.18);
     --radius: 2px;
   }
   *{box-sizing:border-box;}
@@ -68,7 +70,7 @@
     transition:background .4s ease, box-shadow .4s ease, padding .3s ease;
   }
   header.nav.scrolled{
-    background:rgba(246,240,225,.92);
+    background:rgba(246,234,208,.94);
     backdrop-filter:blur(6px);
     box-shadow:0 1px 0 var(--paper-line);
     padding-top:12px;padding-bottom:12px;
@@ -120,7 +122,7 @@
     min-height:640px;
     overflow:hidden;
     background:
-      linear-gradient(180deg, rgba(15,32,42,.55) 0%, rgba(15,32,42,.35) 45%, rgba(15,32,42,.72) 100%),
+      linear-gradient(180deg, rgba(46,30,14,.5) 0%, rgba(74,48,20,.28) 45%, rgba(40,24,10,.75) 100%),
       url('./images/hero-tajima.png') center 60% / cover no-repeat;
   }
   .hero-inner{
@@ -138,8 +140,9 @@
   .hero-eyebrow{
     font-size:.78rem;
     letter-spacing:.32em;
-    color:#E8B79A;
+    color:var(--gold);
     margin-bottom:22px;
+    font-weight:600;
   }
   .hero h1{
     font-size:clamp(3.4rem,11vw,7.2rem);
@@ -182,51 +185,6 @@
     100%{transform:scaleY(0);transform-origin:bottom;}
   }
 
-  /* pins on hero map */
-  .pin{
-    position:absolute;
-    z-index:6;
-    transform:translate(-50%,-50%);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    background:none;border:none;
-    cursor:pointer;
-    color:var(--sand-light);
-    font-family:'Shippori Mincho',serif;
-  }
-  .pin .dot{
-    width:14px;height:14px;
-    border-radius:50%;
-    background:var(--clay);
-    border:2px solid var(--sand-light);
-    box-shadow:0 0 0 0 rgba(189,74,46,.55);
-    animation:pulse 2.6s ease-in-out infinite;
-  }
-  .pin:nth-child(2) .dot{animation-delay:.5s;}
-  .pin:nth-child(3) .dot{animation-delay:1s;}
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(189,74,46,.45);}
-    70%{box-shadow:0 0 0 12px rgba(189,74,46,0);}
-    100%{box-shadow:0 0 0 0 rgba(189,74,46,0);}
-  }
-  .pin .label{
-    margin-top:8px;
-    font-size:.92rem;
-    font-weight:600;
-    background:rgba(22,48,63,.55);
-    padding:3px 10px;
-    border-radius:999px;
-    white-space:nowrap;
-    opacity:0;
-    transform:translateY(4px);
-    transition:opacity .25s ease, transform .25s ease;
-  }
-  .pin:hover .label,.pin:focus-visible .label{
-    opacity:1;
-    transform:translateY(0);
-  }
-
   /* ---------- SECTIONS ---------- */
   section{
     padding:clamp(72px,11vw,140px) 0;
@@ -241,6 +199,17 @@
   .lead{
     text-align:center;
   }
+  .lead-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:clamp(32px,6vw,64px);
+    align-items:center;
+    text-align:left;
+  }
+  @media (max-width:860px){
+    .lead-grid{grid-template-columns:1fr;}
+    .lead-map{order:-1;max-width:300px;margin:0 auto;}
+  }
   .lead h2{
     font-size:clamp(1.7rem,4vw,2.5rem);
     margin:14px 0 28px;
@@ -248,11 +217,31 @@
   }
   .lead .body{
     max-width:42em;
-    margin:0 auto;
+    margin:0;
     font-size:1.02rem;
     color:var(--ink-soft);
   }
   .lead .body + .body{margin-top:1.2em;}
+  .lead-map{
+    background:var(--sand-light);
+    border:1px solid var(--paper-line);
+    padding:22px;
+  }
+  .lead-map svg,.lead-map img{width:100%;height:auto;display:block;}
+  .lead-map-caption{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:14px;
+    font-size:.8rem;
+    color:var(--ink-soft);
+  }
+  .lead-map-caption .chip{
+    width:11px;height:11px;
+    border-radius:50%;
+    background:var(--clay);
+    flex:none;
+  }
 
   /* voices */
   .voices{
@@ -495,7 +484,7 @@
 
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
-    .scroll-cue .line, .pin .dot{animation:none;}
+    .scroll-cue .line{animation:none;}
     .reveal{transition:none;opacity:1;transform:none;}
   }
 </style>
@@ -520,27 +509,22 @@
     <p class="tagline">但馬の<strong>人・場所・体験</strong>に出会いながら、<br class="brk">地域に関わる人を増やしていく地域発信プロジェクト</p>
   </div>
 
-  <!-- interactive pins, positioned to match svg trail points -->
-  <button class="pin" style="left:18%; top:78%;" aria-label="人 に出会う">
-    <span class="dot"></span><span class="label">人 に出会う</span>
-  </button>
-  <button class="pin" style="left:49%; top:70%;" aria-label="場所 をめぐる">
-    <span class="dot"></span><span class="label">場所 をめぐる</span>
-  </button>
-  <button class="pin" style="left:81%; top:80%;" aria-label="体験 をたのしむ">
-    <span class="dot"></span><span class="label">体験 をたのしむ</span>
-  </button>
-
   <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
 </section>
 
 <!-- ================= LEAD / ABOUT ================= -->
 <section id="about" class="lead">
-  <div class="wrap reveal">
-    <div class="eyebrow">About Tajima</div>
-    <h2>兵庫県北部、日本海に面した<br class="brk">自然豊かな土地。</h2>
-    <p class="body">但馬は兵庫の北部に位置し、日本海に面した自然豊かな地域です。海と山に囲まれたこの土地には、まだあまり知られていない人・場所・体験がたくさんあります。</p>
-    <p class="body">たじまっちは、但馬の面白い人・場所・体験に出会いながら、地域に関わる人を増やしていく地域発信プロジェクトです。</p>
+  <div class="wrap reveal lead-grid">
+    <div class="lead-text">
+      <div class="eyebrow">About Tajima</div>
+      <h2>兵庫県北部、日本海に面した<br class="brk">自然豊かな土地。</h2>
+      <p class="body">但馬は兵庫の北部に位置し、日本海に面した自然豊かな地域です。海と山に囲まれたこの土地には、まだあまり知られていない人・場所・体験がたくさんあります。</p>
+      <p class="body">たじまっちは、但馬の面白い人・場所・体験に出会いながら、地域に関わる人を増やしていく地域発信プロジェクトです。</p>
+    </div>
+    <div class="lead-map">
+      <img src="./images/tajima-area-map.png" alt="兵庫県北部の但馬エリア地図（豊岡市・養父市・朝来市・香美町・新温泉町の3市2町）">
+      <div class="lead-map-caption"><span class="chip"></span>但馬エリア（兵庫県北部・3市2町）</div>
+    </div>
   </div>
 </section>
 
@@ -570,24 +554,24 @@
     <div class="quest-grid">
       <div class="quest-card">
         <svg class="quest-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="15" r="8" stroke="#5C6E4A" stroke-width="2"/>
-          <path d="M8,42 C8,30 15,26 24,26 C33,26 40,30 40,42" stroke="#BD4A2E" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="24" cy="15" r="8" stroke="#5C7A3D" stroke-width="2"/>
+          <path d="M8,42 C8,30 15,26 24,26 C33,26 40,30 40,42" stroke="#B8441E" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <h3>人 にであう</h3>
         <p>但馬で挑戦を続ける人、面白い活動をしている人に会いに行く。一人ひとりの想いや背景に触れます。</p>
       </div>
       <div class="quest-card">
         <svg class="quest-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24,42 C24,42 10,28 10,18 C10,10.3 16.3,4 24,4 C31.7,4 38,10.3 38,18 C38,28 24,42 24,42 Z" stroke="#5C6E4A" stroke-width="2"/>
-          <circle cx="24" cy="18" r="5" stroke="#BD4A2E" stroke-width="2"/>
+          <path d="M24,42 C24,42 10,28 10,18 C10,10.3 16.3,4 24,4 C31.7,4 38,10.3 38,18 C38,28 24,42 24,42 Z" stroke="#5C7A3D" stroke-width="2"/>
+          <circle cx="24" cy="18" r="5" stroke="#D9A441" stroke-width="2"/>
         </svg>
         <h3>場所 をめぐる</h3>
         <p>まだあまり知られていない、但馬のとっておきの場所を訪ねる。海沿いの町から山あいの集落まで。</p>
       </div>
       <div class="quest-card">
         <svg class="quest-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6,24 C6,24 14,10 24,10 C34,10 42,24 42,24 C42,24 34,38 24,38 C14,38 6,24 6,24 Z" stroke="#5C6E4A" stroke-width="2"/>
-          <circle cx="24" cy="24" r="6" stroke="#BD4A2E" stroke-width="2"/>
+          <path d="M6,24 C6,24 14,10 24,10 C34,10 42,24 42,24 C42,24 34,38 24,38 C14,38 6,24 6,24 Z" stroke="#5C7A3D" stroke-width="2"/>
+          <circle cx="24" cy="24" r="6" stroke="#3F7D74" stroke-width="2"/>
         </svg>
         <h3>体験 をたのしむ</h3>
         <p>但馬でしか味わえない、五感で楽しむ体験に出会う。実際に歩き、味わい、感じることを大切に。</p>
