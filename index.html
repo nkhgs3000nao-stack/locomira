@@ -285,30 +285,33 @@
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:0;
-    background:rgba(247,251,246,.95);
-    border-top:1px solid var(--paper-line);
+    border-top:1px solid rgba(255,255,255,.3);
   }
   @media (max-width:820px){.quest-grid{grid-template-columns:1fr;}}
   .quest-card{
     padding:36px 30px;
-    border-bottom:1px solid var(--paper-line);
-    border-right:1px solid var(--paper-line);
+    border-bottom:1px solid rgba(255,255,255,.3);
+    border-right:1px solid rgba(255,255,255,.3);
   }
   .quest-grid .quest-card:nth-child(3){border-right:none;}
   @media (max-width:820px){.quest-grid .quest-card{border-right:none;}}
   .quest-icon{
     width:46px;height:46px;
     margin-bottom:18px;
+    filter:drop-shadow(0 1px 4px rgba(0,0,0,.4));
   }
   .quest-card h3{
     font-size:1.2rem;
     margin:0 0 12px;
     font-weight:700;
+    color:var(--sand-light);
+    text-shadow:0 1px 6px rgba(0,0,0,.35);
   }
   .quest-card p{
-    color:var(--ink-soft);
+    color:#EAF1EF;
     font-size:.94rem;
     margin:0;
+    text-shadow:0 1px 6px rgba(0,0,0,.35);
   }
 
   /* members */
@@ -596,13 +599,13 @@
         <img class="member-avatar" src="./images/member1.png" alt="MEMBER 01">
         <div class="member-body">
           <div class="member-tag">MEMBER 01</div>
-          <h3>まみこ</h3>
-          <p class="member-role">たじまっちプロデューサー・起業家/地域発信</p>
-          <p class="member-comment">城崎温泉を拠点に、SNS運用・観光PR・地域発信に取り組みながら、城崎温泉にて浴衣レンタル店プロデュースを行っている。</p>
+          <h3>お名前</h3>
+          <p class="member-role">役割・肩書き</p>
+          <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
           <div class="member-links">
-            <a href="https://x.com/mamiko_onsen" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
-            <a href="https://www.instagram.com/mamiko_onsen/" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-            <a href="https://note.com/mamiko_onsen" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
+            <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
           </div>
         </div>
       </div>
@@ -610,12 +613,12 @@
         <img class="member-avatar" src="./images/member2.png" alt="MEMBER 02">
         <div class="member-body">
           <div class="member-tag">MEMBER 02</div>
-          <h3>まさがず</h3>
-          <p class="member-role">インフルエンサー/情報発信・企画</p>
-          <p class="member-comment">山陰北近畿の魅力を発信するインフルエンサー。地域の"ありのまま"の魅力を全国へ届ける。</p>
+          <h3>お名前</h3>
+          <p class="member-role">役割・肩書き</p>
+          <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
           <div class="member-links">
-            <a href="https://www.tiktok.com/@sanin_kitakinki" aria-label="TikTokを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
-            <a href="https://www.instagram.com/sanin_kitakinki/" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
           </div>
         </div>
@@ -624,12 +627,12 @@
         <img class="member-avatar" src="./images/member3.png" alt="MEMBER 03">
         <div class="member-body">
           <div class="member-tag">MEMBER 03</div>
-          <h3>みどり</h3>
-          <p class="member-role">朝来市・地域プレイヤー/観光・ローカル情報</p>
-          <p class="member-comment">朝来エリアを中心に、地域の魅力や観光に関わる活動を行う。地域とのつながりや、得意な台湾語を活かして活動。</p>
+          <h3>お名前</h3>
+          <p class="member-role">役割・肩書き</p>
+          <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
           <div class="member-links">
             <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
-            <a href="https://www.instagram.com/midori.twjp/" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
           </div>
         </div>
@@ -638,12 +641,12 @@
         <img class="member-avatar" src="./images/member4.png" alt="MEMBER 04">
         <div class="member-body">
           <div class="member-tag">MEMBER 04</div>
-          <h3>さなえ</h3>
-          <p class="member-role">地域アイドル・イベントMC/観光情報</p>
-          <p class="member-comment">現役大学生。神鍋高原の公式アイドル"かんなべかんな"。観光駅長としても活動</p>
+          <h3>お名前</h3>
+          <p class="member-role">役割・肩書き</p>
+          <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
           <div class="member-links">
             <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
-            <a href="https://www.instagram.com/sanae.kimata_2005/" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
           </div>
         </div>
