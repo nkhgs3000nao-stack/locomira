@@ -226,7 +226,10 @@
 
   /* voices */
   .voices{
-    background:var(--sea-deep);
+    position:relative;
+    background:
+      linear-gradient(180deg, rgba(20,35,45,.72) 0%, rgba(20,35,45,.55) 45%, rgba(15,25,35,.82) 100%),
+      url('./images/voices-bg.png') center 40% / cover no-repeat;
     color:var(--sand-light);
   }
   .voices .wrap{text-align:center;}
@@ -333,14 +336,10 @@
     flex:none;
     width:64px;height:64px;
     border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display:block;
+    object-fit:cover;
     background:var(--moss);
-    color:var(--sand-light);
-    font-family:'Shippori Mincho',serif;
-    font-size:1.5rem;
-    font-weight:700;
+    box-shadow:0 1px 4px rgba(0,0,0,.2);
   }
   .member-card:nth-child(2n) .member-avatar{background:var(--sea-mid);}
   .member-body h3{
@@ -359,6 +358,28 @@
     color:var(--ink-soft);
     margin:0;
   }
+  .member-links{
+    display:flex;
+    gap:8px;
+    margin-top:14px;
+  }
+  .member-links a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:32px;height:32px;
+    border-radius:50%;
+    border:1px solid var(--paper-line);
+    color:var(--ink-soft);
+    text-decoration:none;
+    transition:border-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .member-links a:hover{
+    color:var(--clay);
+    border-color:var(--clay);
+    transform:translateY(-2px);
+  }
+  .member-links svg{width:16px;height:16px;}
 
   /* channels */
   .channels{background:var(--sand);}
@@ -567,39 +588,59 @@
     <h2>メンバー紹介</h2>
     <div class="member-grid">
       <div class="member-card">
-        <div class="member-avatar">M</div>
+        <img class="member-avatar" src="./images/member1.png" alt="MEMBER 01">
         <div class="member-body">
           <div class="member-tag">MEMBER 01</div>
           <h3>お名前</h3>
           <p class="member-role">役割・肩書き</p>
           <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
+          <div class="member-links">
+            <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
+          </div>
         </div>
       </div>
       <div class="member-card">
-        <div class="member-avatar">M</div>
+        <img class="member-avatar" src="./images/member2.png" alt="MEMBER 02">
         <div class="member-body">
           <div class="member-tag">MEMBER 02</div>
           <h3>お名前</h3>
           <p class="member-role">役割・肩書き</p>
           <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
+          <div class="member-links">
+            <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
+          </div>
         </div>
       </div>
       <div class="member-card">
-        <div class="member-avatar">M</div>
+        <img class="member-avatar" src="./images/member3.png" alt="MEMBER 03">
         <div class="member-body">
           <div class="member-tag">MEMBER 03</div>
           <h3>お名前</h3>
           <p class="member-role">役割・肩書き</p>
           <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
+          <div class="member-links">
+            <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
+          </div>
         </div>
       </div>
       <div class="member-card">
-        <div class="member-avatar">M</div>
+        <img class="member-avatar" src="./images/member4.png" alt="MEMBER 04">
         <div class="member-body">
           <div class="member-tag">MEMBER 04</div>
           <h3>お名前</h3>
           <p class="member-role">役割・肩書き</p>
           <p class="member-comment">ひとことコメントが入ります。但馬への想いや活動のきっかけなどを書きます。</p>
+          <div class="member-links">
+            <a href="#" aria-label="Xをフォローする"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg></a>
+            <a href="#" aria-label="Instagramを見る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="noteを読む"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg></a>
+          </div>
         </div>
       </div>
     </div>
