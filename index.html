@@ -11,20 +11,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sea-deep:#3E2A16;
-    --sea-mid:#8A5A2B;
-    --sea-light:#C9A66B;
-    --sand:#E7CE9C;
-    --sand-light:#F6EAD0;
-    --clay:#B8441E;
-    --clay-dark:#8F3115;
-    --gold:#D9A441;
-    --gold-dark:#B37F24;
-    --moss:#5C7A3D;
-    --moss-dark:#2E4A1F;
-    --ink:#2B1D0F;
-    --ink-soft:#5A4A34;
-    --paper-line: rgba(43,29,15,0.18);
+    --sea-deep:#1B6FA8;
+    --sea-mid:#3FA9E0;
+    --sea-light:#BFE6F5;
+    --sand:#E4F3E1;
+    --sand-light:#F7FBF6;
+    --clay:#FF7A45;
+    --clay-dark:#E0602E;
+    --gold:#FFC94D;
+    --gold-dark:#E0A82E;
+    --moss:#4CAF50;
+    --moss-dark:#2E7D32;
+    --ink:#1F3A34;
+    --ink-soft:#4C6560;
+    --paper-line: rgba(31,58,52,0.14);
     --radius: 2px;
   }
   *{box-sizing:border-box;}
@@ -70,7 +70,7 @@
     transition:background .4s ease, box-shadow .4s ease, padding .3s ease;
   }
   header.nav.scrolled{
-    background:rgba(246,234,208,.94);
+    background:rgba(247,251,246,.94);
     backdrop-filter:blur(6px);
     box-shadow:0 1px 0 var(--paper-line);
     padding-top:12px;padding-bottom:12px;
@@ -122,7 +122,7 @@
     min-height:640px;
     overflow:hidden;
     background:
-      linear-gradient(180deg, rgba(46,30,14,.5) 0%, rgba(74,48,20,.28) 45%, rgba(40,24,10,.75) 100%),
+      linear-gradient(180deg, rgba(20,70,110,.4) 0%, rgba(40,110,150,.18) 45%, rgba(15,50,80,.68) 100%),
       url('./images/hero-tajima.png') center 60% / cover no-repeat;
   }
   .hero-inner{
@@ -156,7 +156,7 @@
     max-width:34em;
     margin:0 auto;
     font-weight:400;
-    color:#EFE7D4;
+    color:#EAF6FF;
   }
   .hero p.tagline strong{
     color:var(--sand-light);
@@ -208,7 +208,7 @@
   }
   @media (max-width:860px){
     .lead-grid{grid-template-columns:1fr;}
-    .lead-map{order:-1;max-width:300px;margin:0 auto;}
+    .lead-map{order:-1;max-width:320px;margin:0 auto;}
   }
   .lead h2{
     font-size:clamp(1.7rem,4vw,2.5rem);
@@ -222,26 +222,7 @@
     color:var(--ink-soft);
   }
   .lead .body + .body{margin-top:1.2em;}
-  .lead-map{
-    background:var(--sand-light);
-    border:1px solid var(--paper-line);
-    padding:22px;
-  }
-  .lead-map svg,.lead-map img{width:100%;height:auto;display:block;}
-  .lead-map-caption{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-top:14px;
-    font-size:.8rem;
-    color:var(--ink-soft);
-  }
-  .lead-map-caption .chip{
-    width:11px;height:11px;
-    border-radius:50%;
-    background:var(--clay);
-    flex:none;
-  }
+  .lead-map img{width:100%;height:auto;display:block;}
 
   /* voices */
   .voices{
@@ -249,7 +230,7 @@
     color:var(--sand-light);
   }
   .voices .wrap{text-align:center;}
-  .voices .eyebrow{color:#E8B79A;}
+  .voices .eyebrow{color:#FFD98A;}
   .voice-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -265,7 +246,7 @@
     border-radius:var(--radius);
   }
   .voice-card::before{
-    content:"“";
+    content:"\201C";
     font-family:'Shippori Mincho',serif;
     font-size:3.4rem;
     color:var(--clay);
@@ -283,7 +264,7 @@
   .voices .closing{
     max-width:38em;
     margin:0 auto;
-    color:#D8CEB8;
+    color:#CFE8EF;
   }
 
   /* quest categories */
@@ -436,7 +417,7 @@
     margin:0 0 18px;
   }
   .cta p{
-    color:#DCE3D2;
+    color:#DFF0DA;
     max-width:32em;
     margin:0 auto 36px;
   }
@@ -469,7 +450,7 @@
 
   footer{
     background:var(--sea-deep);
-    color:#9FB4BC;
+    color:#AFD4E0;
     text-align:center;
     padding:40px 20px 32px;
     font-size:.8rem;
@@ -523,7 +504,6 @@
     </div>
     <div class="lead-map">
       <img src="./images/tajima-area-map.png" alt="兵庫県北部の但馬エリア地図（豊岡市・養父市・朝来市・香美町・新温泉町の3市2町）">
-      <div class="lead-map-caption"><span class="chip"></span>但馬エリア（兵庫県北部・3市2町）</div>
     </div>
   </div>
 </section>
@@ -554,24 +534,24 @@
     <div class="quest-grid">
       <div class="quest-card">
         <svg class="quest-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="15" r="8" stroke="#5C7A3D" stroke-width="2"/>
-          <path d="M8,42 C8,30 15,26 24,26 C33,26 40,30 40,42" stroke="#B8441E" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="24" cy="15" r="8" stroke="#4CAF50" stroke-width="2"/>
+          <path d="M8,42 C8,30 15,26 24,26 C33,26 40,30 40,42" stroke="#FF7A45" stroke-width="2" stroke-linecap="round"/>
         </svg>
-        <h3>人 に出会う</h3>
+        <h3>人 にであう</h3>
         <p>但馬で挑戦を続ける人、面白い活動をしている人に会いに行く。一人ひとりの想いや背景に触れます。</p>
       </div>
       <div class="quest-card">
         <svg class="quest-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24,42 C24,42 10,28 10,18 C10,10.3 16.3,4 24,4 C31.7,4 38,10.3 38,18 C38,28 24,42 24,42 Z" stroke="#5C7A3D" stroke-width="2"/>
-          <circle cx="24" cy="18" r="5" stroke="#D9A441" stroke-width="2"/>
+          <path d="M24,42 C24,42 10,28 10,18 C10,10.3 16.3,4 24,4 C31.7,4 38,10.3 38,18 C38,28 24,42 24,42 Z" stroke="#4CAF50" stroke-width="2"/>
+          <circle cx="24" cy="18" r="5" stroke="#FFC94D" stroke-width="2"/>
         </svg>
         <h3>場所 をめぐる</h3>
         <p>まだあまり知られていない、但馬のとっておきの場所を訪ねる。海沿いの町から山あいの集落まで。</p>
       </div>
       <div class="quest-card">
         <svg class="quest-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6,24 C6,24 14,10 24,10 C34,10 42,24 42,24 C42,24 34,38 24,38 C14,38 6,24 6,24 Z" stroke="#5C7A3D" stroke-width="2"/>
-          <circle cx="24" cy="24" r="6" stroke="#3F7D74" stroke-width="2"/>
+          <path d="M6,24 C6,24 14,10 24,10 C34,10 42,24 42,24 C42,24 34,38 24,38 C14,38 6,24 6,24 Z" stroke="#4CAF50" stroke-width="2"/>
+          <circle cx="24" cy="24" r="6" stroke="#1B6FA8" stroke-width="2"/>
         </svg>
         <h3>体験 をたのしむ</h3>
         <p>但馬でしか味わえない、五感で楽しむ体験に出会う。実際に歩き、味わい、感じることを大切に。</p>
