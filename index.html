@@ -51,6 +51,15 @@
     color:var(--clay);
     text-transform:uppercase;
   }
+  .section-title{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(1rem,3.2vw,1.15rem);
+    font-weight:700;
+    color:var(--ink);
+    margin:10px 0 0;
+  }
+  .thought .section-title{color:var(--sand-light);}
+  .whatis .section-title{margin-bottom:10px;}
   .wrap{
     max-width:1080px;
     margin:0 auto;
@@ -251,7 +260,7 @@
     .lead-map{max-width:420px;margin:24px auto 0;}
   }
   .lead h2{
-    font-size:clamp(1.3rem,4.4vw,2.5rem);
+    font-size:clamp(1.55rem,4.8vw,2.75rem);
     margin:14px 0 28px;
     font-weight:700;
   }
@@ -469,8 +478,19 @@
     margin:14px 0 14px;
     font-weight:700;
   }
+  .sponsor-badge{
+    display:inline-block;
+    background:var(--clay);
+    color:#fff;
+    font-size:.76rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    padding:5px 16px;
+    border-radius:999px;
+    margin-bottom:20px;
+  }
   .sponsor .intro{
-    max-width:34em;
+    max-width:36em;
     margin:0 auto 44px;
     color:var(--ink-soft);
     font-size:clamp(.92rem,3.4vw,1rem);
@@ -627,7 +647,7 @@
 <section id="what-is" class="pad whatis">
   <div class="wrap reveal">
     <div class="eyebrow">What is たじまっち</div>
-　　<h2>たじまっちとは</h2>
+    <p class="section-title">たじまっちとは</p>
     <div class="whatis-grid">
       <div class="whatis-logo"><img src="./images/tajimatch-logo.png" alt="たじまっち"></div>
       <h2>単なる観光紹介ではなく、<br class="brk">地域の人の想いや活動を<span>「伝える」</span>ローカルメディア</h2>
@@ -641,7 +661,7 @@
   <div class="wrap reveal lead-grid">
     <div class="lead-text">
       <div class="eyebrow">About Tajima</div>
-　　　<h2>但馬について</h2>
+      <p class="section-title">但馬について</p>
       <h2>兵庫県北部、日本海に面した<br>自然豊かな土地。</h2>
       <p class="body">但馬は、兵庫県北部に位置し、日本海と豊かな山々に囲まれた自然豊かな地域です。城崎温泉や但馬牛、松葉ガニ、コウノトリなど、豊かな自然が育んだ観光・食・文化が魅力です。</p>
       <p class="body">たじまっちでは、但馬の面白い人・場所・体験に出会いながら、この魅力が詰まった場所をさまざまな角度から発信します。</p>
@@ -656,7 +676,7 @@
 <section id="thought" class="pad thought">
   <div class="wrap reveal">
     <div class="eyebrow">Thought</div>
-　　<h2>想い</h2>
+    <p class="section-title">想い</p>
     <h2 class="headline">但馬の魅力に<mark>会いに行く。</mark></h2>
     <div class="prose">
       <p>但馬の魅力は「場所」や「モノ」だけではなく、その背景にいる<strong>「人の想いや生き方」</strong>にこそ宿っている。</p>
@@ -775,14 +795,15 @@
   <div class="wrap reveal">
     <div class="eyebrow">Sponsor company</div>
     <h2>スポンサー企業様</h2>
-    <p class="intro">たじまっちの活動は、但馬エリアの企業・団体の皆様のご支援によって成り立っています。</p>
+    <span class="sponsor-badge">募集中</span>
+    <p class="intro">たじまっちは、活動を共に支えてくださる但馬エリアの企業・団体様を募集しています。現在、スポンサー企業様はまだいらっしゃいません。第一号の応援者になりませんか。</p>
     <div class="sponsor-grid">
-      <div class="sponsor-slot">LOGO</div>
-      <div class="sponsor-slot">LOGO</div>
-      <div class="sponsor-slot">LOGO</div>
-      <div class="sponsor-slot">LOGO</div>
+      <div class="sponsor-slot">募集中</div>
+      <div class="sponsor-slot">募集中</div>
+      <div class="sponsor-slot">募集中</div>
+      <div class="sponsor-slot">募集中</div>
     </div>
-    <p class="note">協賛にご興味をお持ちの企業・団体様は<a href="#contact">お問い合わせ</a>よりご連絡ください。</p>
+    <a href="#contact" class="btn btn-fill" style="margin-top:36px;">協賛について問い合わせる</a>
   </div>
 </section>
 
