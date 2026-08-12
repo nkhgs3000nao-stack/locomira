@@ -248,10 +248,10 @@
   }
   @media (max-width:860px){
     .lead-grid{grid-template-columns:1fr;}
-    .lead-map{order:-1;max-width:420px;margin:0 auto;}
+    .lead-map{max-width:420px;margin:24px auto 0;}
   }
   .lead h2{
-    font-size:clamp(1.7rem,4vw,2.5rem);
+    font-size:clamp(1.3rem,4.4vw,2.5rem);
     margin:14px 0 28px;
     font-weight:700;
   }
@@ -273,44 +273,46 @@
     text-align:center;
   }
   .thought .eyebrow{color:#FFD98A;text-shadow:0 1px 8px rgba(0,0,0,.4);}
-  .thought .statement{
+  .thought .headline{
     font-family:'Shippori Mincho',serif;
-    font-size:clamp(1.25rem,4.2vw,1.9rem);
-    line-height:1.85;
-    max-width:22em;
-    margin:20px auto 40px;
-    font-weight:700;
-    text-shadow:0 1px 10px rgba(0,0,0,.45);
+    font-size:clamp(1.8rem,5.4vw,2.7rem);
+    line-height:1.6;
+    margin:18px auto 44px;
+    font-weight:800;
+    text-shadow:0 2px 14px rgba(0,0,0,.5);
   }
-  .thought .statement em{
-    font-style:normal;
-    color:var(--gold);
+  .thought .headline mark{
+    background:none;
+    color:var(--sand-light);
   }
-  .thought-card{
-    max-width:640px;
-    margin:0 auto 32px;
-    background:rgba(10,25,30,.4);
-    border:1px solid rgba(255,255,255,.22);
-    padding:32px 30px;
+  .thought .prose{
+    max-width:34em;
+    margin:0 auto;
     text-align:left;
-    backdrop-filter:blur(2px);
   }
-
-  .thought-card p{
-    font-family:'Shippori Mincho',serif;
-    font-size:clamp(1.02rem,3.6vw,1.15rem);
-    font-weight:600;
-    margin:0;
+  .thought .prose p{
+    font-size:clamp(.95rem,3.4vw,1.05rem);
+    line-height:2;
+    margin:0 0 1.4em;
     color:var(--sand-light);
     text-shadow:0 1px 8px rgba(0,0,0,.4);
   }
-  .thought .closing{
-    max-width:32em;
-    margin:0 auto;
-    color:#CFE8EF;
-    text-shadow:0 1px 8px rgba(0,0,0,.4);
-    font-size:clamp(.95rem,3.4vw,1.05rem);
+  .thought .prose p strong{
+    color:var(--gold);
     font-weight:700;
+  }
+  .thought .prose p.quote{
+    font-family:'Shippori Mincho',serif;
+    font-weight:600;
+    font-size:clamp(1rem,3.6vw,1.12rem);
+    padding-left:18px;
+    border-left:3px solid var(--gold);
+  }
+  .thought .prose p.closing{
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-weight:400;
+    color:var(--sand-light);
+    margin-bottom:0;
   }
 
   /* ---------- ACTIVITIES ---------- */
@@ -638,7 +640,7 @@
   <div class="wrap reveal lead-grid">
     <div class="lead-text">
       <div class="eyebrow">About Tajima</div>
-      <h2>兵庫県北部、日本海に面した<br class="brk">自然豊かな土地。</h2>
+      <h2>兵庫県北部、日本海に面した<br>自然豊かな土地。</h2>
       <p class="body">但馬は兵庫の北部に位置し、日本海に面した自然豊かな地域です。海と山に囲まれたこの土地には、まだあまり知られていない人・場所・体験がたくさんあります。</p>
       <p class="body">たじまっちは、但馬の面白い人・場所・体験に出会いながら、地域に関わる人を増やしていく地域発信プロジェクトです。</p>
     </div>
@@ -652,11 +654,12 @@
 <section id="thought" class="pad thought">
   <div class="wrap reveal">
     <div class="eyebrow">Thought</div>
-    <p class="statement">但馬の魅力は「場所」や「モノ」だけではなく、<br class="brk">その背景にいる<em>「人の想いや生き方」</em>にこそ宿っている。</p>
-    <div class="thought-card">
-      <p>「場所やモノの紹介だけじゃなく、この地域で頑張っている『人』にスポットライトを当てたい！」</p>
+    <h2 class="headline">但馬の魅力に<mark>会いに行く。</mark></h2>
+    <div class="prose">
+      <p>但馬の魅力は「場所」や「モノ」だけではなく、その背景にいる<strong>「人の想いや生き方」</strong>にこそ宿っている。</p>
+      <p class="quote">「場所やモノの紹介だけじゃなく、この地域で頑張っている『人』にスポットライトを当てたい！」</p>
+      <p class="closing">そんな想いから、たじまっちは走り出しています。</p>
     </div>
-    <p class="closing">そんな想いから、たじまっちは走り出しています。</p>
   </div>
 </section>
 
