@@ -268,7 +268,7 @@
   .thought{
     background:
       linear-gradient(180deg, rgba(10,25,30,.62) 0%, rgba(10,25,30,.45) 45%, rgba(8,18,22,.72) 100%),
-      url('./images/motivation-bg.png') center 45% / cover no-repeat;
+      url('./images/motivation-bg.jpg') center 45% / cover no-repeat;
     color:var(--sand-light);
     text-align:center;
   }
@@ -346,8 +346,8 @@
   .activity-card:nth-child(2){background:#FCEEE5;}
   .activity-card:nth-child(3){background:#EFF1EA;}
   .activity-icon-frame{
-    width:clamp(84px,18vw,108px);
-    height:clamp(84px,18vw,108px);
+    width:clamp(110px,22vw,140px);
+    height:clamp(110px,22vw,140px);
     border-radius:50%;
     background:#FFFFFF;
     display:flex;
@@ -355,9 +355,11 @@
     justify-content:center;
     margin:0 0 20px;
     box-shadow:0 3px 10px rgba(31,58,52,.1);
+    overflow:hidden;
   }
   .activity-icon{
-    width:52px;height:52px;
+    width:100%;height:100%;
+    object-fit:cover;
   }
   .activity-tag{
     font-family:'Shippori Mincho',serif;
@@ -496,7 +498,14 @@
   .sponsor .note a{color:var(--clay);font-weight:700;text-decoration:none;border-bottom:1px solid var(--clay);}
 
   /* ---------- CONTACT ---------- */
-  .contact{background:var(--moss-dark);color:var(--sand-light);text-align:center;}
+  .contact{
+    position:relative;
+    background:
+      linear-gradient(180deg, rgba(20,40,25,.62) 0%, rgba(20,40,25,.5) 45%, rgba(12,26,16,.72) 100%),
+      url('./images/contact-bg.jpg') center 50% / cover no-repeat;
+    color:var(--sand-light);
+    text-align:center;
+  }
   .contact h2{
     font-size:clamp(1.5rem,3.8vw,2.1rem);
     margin:14px 0 18px;
@@ -524,7 +533,14 @@
   .btn-outline:hover{transform:translateY(-2px);background:rgba(255,255,255,.08);}
 
   /* ---------- SOCIAL ---------- */
-  .social{background:var(--sea-deep);color:var(--sand-light);text-align:center;}
+  .social{
+    position:relative;
+    background:
+      linear-gradient(180deg, rgba(20,30,45,.55) 0%, rgba(20,30,45,.4) 45%, rgba(12,18,28,.72) 100%),
+      url('./images/social-bg.jpg') center 55% / cover no-repeat;
+    color:var(--sand-light);
+    text-align:center;
+  }
   .social h2{
     font-size:clamp(1.5rem,3.8vw,2.1rem);
     margin:14px 0 14px;
@@ -627,7 +643,7 @@
       <p class="body">たじまっちは、但馬の面白い人・場所・体験に出会いながら、地域に関わる人を増やしていく地域発信プロジェクトです。</p>
     </div>
     <div class="lead-map">
-      <img src="./images/tajima-area-map.png" alt="兵庫県北部の但馬エリア地図（豊岡市・養父市・朝来市・香美町・新温泉町の3市2町）">
+      <img src="./images/tajima-area-map.jpg" alt="兵庫県北部の但馬エリア地図（豊岡市・養父市・朝来市・香美町・新温泉町の3市2町）">
     </div>
   </div>
 </section>
@@ -648,18 +664,12 @@
 <section id="activities" class="pad activities">
   <div class="wrap reveal">
     <div class="eyebrow">Activities details</div>
-    <h2>発信のかたち</h2>
+    <h2>活動内容</h2>
     <p class="intro">但馬を楽しみながら巡り、地域の魅力を発信していきます。</p>
     <div class="activity-grid">
       <div class="activity-card">
         <div class="activity-icon-frame">
-          <svg class="activity-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="14" y="6" width="24" height="44" rx="5" stroke="#3FA9E0" stroke-width="2.4"/>
-            <path d="M18,14 L34,14" stroke="#3FA9E0" stroke-width="2" stroke-linecap="round"/>
-            <path d="M9,22 L18,15 L18,32 Z" fill="#EAF2F6" stroke="#4CAF50" stroke-width="1.6" stroke-linejoin="round"/>
-            <circle cx="26" cy="28" r="10" fill="#fff" stroke="#FF7A45" stroke-width="2.2"/>
-            <path d="M23,23.5 L32,28 L23,32.5 Z" fill="#FF7A45"/>
-          </svg>
+          <img class="activity-icon" src="./images/icon-video.png" alt="ショート動画">
         </div>
         <span class="activity-tag">ショート動画</span>
         <p>但馬の人・場所・文化を<br>面白く親しみやすく発信</p>
@@ -668,14 +678,7 @@
       </div>
       <div class="activity-card">
         <div class="activity-icon-frame">
-          <svg class="activity-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="9" y="6" width="26" height="44" rx="5" stroke="#FF7A45" stroke-width="2.4"/>
-            <path d="M13,14 L31,14" stroke="#FF7A45" stroke-width="2" stroke-linecap="round"/>
-            <path d="M15,24 C19,20 25,20 29,24 C25,26 19,26 15,24Z" fill="#FCEEE5" stroke="#4CAF50" stroke-width="1.4"/>
-            <circle cx="22" cy="34" r="2" fill="#4CAF50"/>
-            <path d="M38,16 C34,16 32,20 36,24 C40,20 42,16 38,16Z" fill="#FF7A45"/>
-            <path d="M44,26 H52 M44,30 H52 M44,34 H48" stroke="#FFC94D" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+          <img class="activity-icon" src="./images/icon-stories.png" alt="ストーリーズ">
         </div>
         <span class="activity-tag">ストーリーズ</span>
         <p>日常やイベントを<br>リアルタイムに発信</p>
@@ -684,14 +687,7 @@
       </div>
       <div class="activity-card">
         <div class="activity-icon-frame">
-          <svg class="activity-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M28,12 C24,9 16,8 10,10 V42 C16,40 24,41 28,44 C32,41 40,40 46,42 V10 C40,8 32,9 28,12 Z" stroke="#4CAF50" stroke-width="2.2" stroke-linejoin="round"/>
-            <path d="M28,12 V44" stroke="#4CAF50" stroke-width="1.6"/>
-            <path d="M14,18 H23 M14,24 H23" stroke="#9BB8A8" stroke-width="1.4" stroke-linecap="round"/>
-            <path d="M33,18 H42 M33,24 H42" stroke="#9BB8A8" stroke-width="1.4" stroke-linecap="round"/>
-            <path d="M37,10 L47,20 L44,23 L34,13 Z" fill="#FF7A45" stroke="#FF7A45" stroke-width="1"/>
-            <path d="M34,13 L31,22 L37,20 Z" fill="#FCEEE5" stroke="#FF7A45" stroke-width="1"/>
-          </svg>
+          <img class="activity-icon" src="./images/icon-note.png" alt="note記事">
         </div>
         <span class="activity-tag">note記事</span>
         <p>人や活動の背景・思いを<br>丁寧に伝える</p>
