@@ -483,7 +483,7 @@
     font-size:clamp(1.6rem,4vw,2.3rem);
     margin:10px 0 18px;
     font-weight:800;
-    color:var(--moss-dark);
+    color:var(--ink);
   }
   .sponsor .intro{
     max-width:36em;
@@ -502,15 +502,16 @@
   .sponsor-card{
     background:var(--sand-light);
     border-radius:16px;
-    padding:34px 26px 28px;
+    padding:34px 26px 30px;
     box-shadow:0 3px 16px rgba(31,58,52,.08);
     display:flex;
     flex-direction:column;
     align-items:center;
   }
   .sponsor-icon-frame{
-    width:76px;height:76px;
+    width:96px;height:96px;
     margin-bottom:18px;
+    object-fit:contain;
   }
   .sponsor-card h3{
     font-size:1.1rem;
@@ -520,23 +521,9 @@
   .sponsor-card p{
     font-size:.88rem;
     color:var(--ink-soft);
-    margin:0 0 22px;
+    margin:0;
     line-height:1.75;
   }
-  .sponsor-logo-slot{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:#B9C4BC;
-    font-size:.74rem;
-    font-weight:700;
-    letter-spacing:.08em;
-    border-top:1px dashed var(--paper-line);
-    padding-top:16px;
-    width:100%;
-    justify-content:center;
-  }
-  .sponsor-logo-slot svg{width:20px;height:20px;}
   .sponsor .note{
     margin-top:16px;
     font-size:.85rem;
@@ -817,58 +804,24 @@
 <!-- ================= SPONSOR ================= -->
 <section id="sponsor" class="pad sponsor">
   <div class="wrap reveal">
-    <div class="eyebrow">SPONSOR /</div>
+    <div class="eyebrow">Sponsor company</div>
     <h2>パートナー企業様募集</h2>
     <p class="intro">但馬の魅力を発信する活動を、一緒に支えてくれませんか？<br class="brk">但馬の未来を一緒に育む、最初の応援者になりませんか？</p>
     <div class="sponsor-grid">
       <div class="sponsor-card">
-        <svg class="sponsor-icon-frame" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="6" y="10" width="44" height="34" rx="4" stroke="#FF7A45" stroke-width="2.4"/>
-          <path d="M6,18 H50" stroke="#FF7A45" stroke-width="2.4"/>
-          <circle cx="12" cy="14" r="1.4" fill="#FF7A45"/>
-          <circle cx="17" cy="14" r="1.4" fill="#FF7A45"/>
-          <path d="M13,26 H38 M13,32 H32" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
-          <rect x="34" y="30" width="26" height="38" rx="6" stroke="#1F3A34" stroke-width="2.4"/>
-          <circle cx="47" cy="52" r="8" fill="#FCEEE5" stroke="#FF7A45" stroke-width="2"/>
-          <path d="M44.5,48 L52,52 L44.5,56 Z" fill="#FF7A45"/>
-        </svg>
+        <img class="sponsor-icon-frame" src="./images/sponsor-icon-web.png" alt="Web/SNSでの発信">
         <h3>Web/SNSでの発信</h3>
         <p>当サイトおよびSNSでのロゴ掲載・紹介記事作成。</p>
-        <div class="sponsor-logo-slot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M9 14h.01M15 10h.01M15 14h.01"/></svg>
-          YOUR LOGO
-        </div>
       </div>
       <div class="sponsor-card">
-        <svg class="sponsor-icon-frame" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M38,10 C30,10 24,16 24,23 C24,29 28,32 33,36 H43 C48,32 52,29 52,23 C52,16 46,10 38,10 Z" stroke="#4CAF50" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M38,10 V30" stroke="#4CAF50" stroke-width="2"/>
-          <path d="M16,58 C16,48 24,44 30,44 C24,50 24,58 28,64" stroke="#1F3A34" stroke-width="2.4" stroke-linecap="round"/>
-          <path d="M60,58 C60,48 52,44 46,44 C52,50 52,58 48,64" stroke="#1F3A34" stroke-width="2.4" stroke-linecap="round"/>
-          <text x="38" y="53" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif" font-size="11" font-weight="700" fill="#FF7A45">CSR</text>
-        </svg>
+        <img class="sponsor-icon-frame" src="./images/sponsor-icon-csr.png" alt="地域貢献・CSR">
         <h3>地域貢献・CSR</h3>
         <p>但馬を盛り上げるコミュニティ活動への支援実績として。</p>
-        <div class="sponsor-logo-slot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M9 14h.01M15 10h.01M15 14h.01"/></svg>
-          YOUR LOGO
-        </div>
       </div>
       <div class="sponsor-card">
-        <svg class="sponsor-icon-frame" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10,34 L26,28 V46 L10,40 Z" stroke="#FF7A45" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M26,28 L40,20 V54 L26,46" stroke="#FF7A45" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M18,42 L21,52" stroke="#FF7A45" stroke-width="2.2" stroke-linecap="round"/>
-          <circle cx="56" cy="46" r="11" fill="#fff" stroke="#1F3A34" stroke-width="2.4"/>
-          <circle cx="56" cy="46" r="4.5" fill="none" stroke="#1F3A34" stroke-width="2"/>
-          <rect x="49" y="35" width="5" height="4" rx="1" fill="#1F3A34"/>
-        </svg>
+        <img class="sponsor-icon-frame" src="./images/sponsor-icon-collab.png" alt="コラボ企画">
         <h3>コラボ企画</h3>
         <p>取材記事の作成やイベント共催など、特別なタイアップ企画の実施。</p>
-        <div class="sponsor-logo-slot">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M9 14h.01M15 10h.01M15 14h.01"/></svg>
-          YOUR LOGO
-        </div>
       </div>
     </div>
     <a href="#contact" class="btn btn-fill" style="margin-top:40px;">お問い合わせ</a>
